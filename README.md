@@ -1,5 +1,5 @@
 # ⚛️ React + TypeScript Component Architecture
-# ⚛️ Arquitectura de Componentes con React + TypeScript
+### Arquitectura de Componentes con React + TypeScript
 
 Proyecto enfocado en la creación de interfaces modernas, reutilizables y escalables utilizando React, TypeScript y Tailwind CSS.
 
@@ -7,17 +7,26 @@ Project focused on building modern, reusable, and scalable interfaces using Reac
 
 ---
 
-# ✨ Features | Características
+## ✨ Features | Características
 
 - 🧩 Arquitectura modular / Modular architecture
 - 🔒 TypeScript con tipado estricto / Strict TypeScript typing
 - 🎨 Tailwind CSS para estilos dinámicos / Dynamic styling with Tailwind CSS
 - 🧱 Composición avanzada de componentes / Advanced component composition
 - ⚡ Vite para desarrollo rápido / Fast development environment with Vite
+- 🪝 React Hooks (`useState`) / React Hooks integration
+- 🔢 Contador interactivo / Interactive counter component
+- 👁️ Toggle dinámico de contraseña / Dynamic password visibility toggle
 
 ---
 
-# 📁 Project Structure | Estructura del Proyecto
+## 📸 Preview | Vista Previa
+
+![Application Preview](./docs/previews/react-preview.png)
+
+---
+
+## 📁 Project Structure | Estructura del Proyecto
 
 ```
 src/
@@ -28,9 +37,13 @@ src/
 │   │   ├── Button.types.ts
 │   │   └── Button.styles.ts
 │   │
-│   └── Card/
-│       ├── Card.tsx
-│       └── Card.types.ts
+│   ├── Counter/
+│   │   ├── Counter.tsx
+│   │   └── Counter.types.ts
+│   │
+│   ├── PasswordField/
+│   │   ├── PasswordField.tsx
+│   │   └── PasswordField.types.ts
 │
 ├── pages/
 ├── hooks/
@@ -40,41 +53,44 @@ src/
 
 ---
 
-# 📊 Component Architecture | Arquitectura de Componentes
+## 📊 Component Architecture | Arquitectura de Componentes
 
 ```mermaid
-graph TD;
+graph TD
     App --> Button
-    App --> Card
-    Card --> Button
+    App --> Counter
+    App --> PasswordField
+
+    Counter --> useState
+    PasswordField --> useState
 ```
 
 ---
 
-# 🛠️ Technologies | Tecnologías
+## 🛠️ Technologies | Tecnologías
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
+| Frontend | Styling | Tooling |
+|---|---|---|
+| React | Tailwind CSS | Vite |
+| TypeScript | CSS Modules | npm |
 
 ---
 
-# 📦 Installation | Instalación
+## 📦 Installation | Instalación
 
-## Clone repository | Clonar repositorio
+### Clone repository | Clonar repositorio
 
 ```bash
 git clone <repository-url>
 ```
 
-## Install dependencies | Instalar dependencias
+### Install dependencies | Instalar dependencias
 
 ```bash
 npm install
 ```
 
-## Start development server | Iniciar entorno de desarrollo
+### Start development server | Iniciar entorno de desarrollo
 
 ```bash
 npm run dev
@@ -82,9 +98,13 @@ npm run dev
 
 ---
 
-# 🧩 Button Component | Componente Button
+## 🧩 Included Components | Componentes Incluidos
 
-## Available Variants | Variantes Disponibles
+### 🔘 Button Component
+
+Reusable button component with visual variants and custom props.
+
+Componente reutilizable de botones con variantes visuales y props personalizadas.
 
 | Variant | Description |
 |---|---|
@@ -95,21 +115,47 @@ npm run dev
 
 ---
 
-# 💡 Usage Example | Ejemplo de Uso
+### 🔢 Counter Component
+
+Interactive counter built with `useState`.
+
+Contador interactivo construido con `useState`.
+
+Features:
+- Increment
+- Decrement
+- Reset state
+
+---
+
+### 👁️ Password Toggle Component
+
+Dynamic password visibility field using React state.
+
+Campo dinámico para mostrar u ocultar contraseñas utilizando estado en React.
+
+Features:
+- Show password
+- Hide password
+- Dynamic input type switching
+
+---
+
+## 💡 Usage Example | Ejemplo de Uso
 
 ```tsx
 <Button variant="primary">
   Click me
 </Button>
 
-<Button variant="outline" rounded>
-  Secondary Action
-</Button>
+<Counter />
+
+<PasswordField />
 ```
 
 ---
 
-# 📄 License | Licencia
+## 📄 License | Licencia
 
 GNU General Public License v3.0 (GPL-3.0)
 
@@ -117,6 +163,6 @@ https://www.gnu.org/licenses/gpl-3.0.html
 
 ---
 
-# 👨‍💻 Author | Autor
+## 👨‍💻 Author | Autor
 
 Jesús Blanco Andrade
